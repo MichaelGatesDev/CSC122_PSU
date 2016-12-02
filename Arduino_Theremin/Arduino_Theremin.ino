@@ -1,7 +1,7 @@
 /*
    Author: Michael Gates
-   Date: 28 Octoer 2016
-   Description: Generates tones C-A via a Piezo Buzzer
+   Date: 30 November 2016
+   Description: Makeshift Theramen works by generating tones C-A via a Piezo Buzzer
 */
 
 int buzzerPin = A0;
@@ -17,13 +17,13 @@ void setup()
 void loop()
 {
   int value = analogRead(A1);
-  int mapped = map(value, 400, 600, 0, 9);
+  Serial.print("Light level = ");
+  Serial.println(value);
   
-  Serial.print(value);
-  Serial.print(",");
+  int mapped = map(value, 5, 105, 0, 9);
   Serial.println(mapped);
   
-  //tone(buzzerPin, notes[mapped]);
-  delay(500);
+  tone(buzzerPin, notes[mapped]);
+  delay(50);
 }
 
