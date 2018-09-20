@@ -3,5 +3,3 @@ Here are all of the projects which I created for the CSC122-A 'Physical Computin
 
 # Kit Type
 - Arduino Uno
-
-Copyright Michael A. Gates 2016
